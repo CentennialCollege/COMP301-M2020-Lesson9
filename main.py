@@ -42,6 +42,28 @@ def lists():
 
     print(lista==listc)
 
+    someOtherList=[19, 3, 15, 7, 11]
+    aNewList=someOtherList[1:3]
+    endList=someOtherList[:2]
+
+    print(endList)
+
+    sentence="hello, my name is Tom"
+
+    if "Tom" in sentence:
+        print("Tom is in the sentence")
+    else:
+        print("Error: not in the sentence.")
+
+    del(someOtherList[-1])
+
+    print(someOtherList)
+
+    someOtherList.clear()
+
+    print(someOtherList)
+
+
 def tuples():
     john='John', 'Green', 3.3
 
@@ -106,6 +128,51 @@ def iterate():
 
     print(tuple(enumerate(colors)))
 
-    
+def dictionaries():
+    my_dictionary = {}
+    my_dictionary[0]="0"
+    my_dictionary["Tom"]="Tom"
+    my_dictionary["Mark"]="Sensei"
+    my_dictionary["Toronto"]="Hot"
 
-iterate()
+    print(my_dictionary)
+
+    another_one={'Tom': 'Tom', 'Mark': 'Sensei', 'Toronto': 'Hot'}
+
+    if(my_dictionary == another_one):
+        print("both dictionaries are the same!")
+
+    print(dict(enumerate(another_one)))
+
+    print(my_dictionary[0])
+
+    print(list(my_dictionary.items()))
+
+def is_odd(x):
+    """Returns True only if x is odd."""
+    return x % 2 !=0
+
+def is_even(x):
+    """Returns True only if x is even. """
+    return x % 2 == 0
+
+def counting():
+    responses = [1, 2, 5, 4, 3, 5, 2, 1, 3, 3, 1, 4, 3, 3, 3, 2, 3, 3, 2, 2]
+
+    for i in range(1, 6):
+        print(f'{i} appears {responses.count(i)} times in responses')
+
+    responses.reverse()
+
+    print(responses)
+
+    new_responses = responses.copy()
+
+    new_responses.reverse()
+
+    print(new_responses)
+
+    print(list(filter(is_even, new_responses)))
+
+
+counting()
