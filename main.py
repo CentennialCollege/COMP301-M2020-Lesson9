@@ -1,3 +1,5 @@
+from barplot import SixSidedDie_BarPlot as d6_plot
+
 def lists():
     """ Application Entry point """
     print("Main Started...")
@@ -62,7 +64,6 @@ def lists():
     someOtherList.clear()
 
     print(someOtherList)
-
 
 def tuples():
     john='John', 'Green', 3.3
@@ -175,4 +176,4 @@ def counting():
     print(list(filter(is_even, new_responses)))
 
 
-counting()
+d6_plot(60000)
